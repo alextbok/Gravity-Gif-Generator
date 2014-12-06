@@ -1,0 +1,137 @@
+#lamp {
+  position: absolute;
+  height: 63px;
+  width: 50px;
+  left: 340px;
+  /*duration per bounce ≈ (((top of bounce location) - (bottom of bounce location))/125)*/
+  -webkit-animation: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+  animation: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+  -moz-animation: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+  -o-animation: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+}
+
+.gravifytext {
+  position: absolute;
+  bottom: 0px;
+  width: 519px;
+}
+
+
+#gravify {
+  position: absolute;
+  bottom: 63px;
+}
+
+#itext {
+  display: inline-block;
+  width: 59px;
+  left: 319px;
+  -webkit-animation: squish .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+  animation: squish .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+  -moz-animation: squish .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+  -o-animation: squish .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+
+}
+
+#gravtext {
+  display: inline-block;
+  position: absolute;
+  width: 319px;
+}
+
+#fytext {
+  display: inline-block;
+  position: absolute;
+  width: 139px;
+  left: 378px;
+}
+
+
+@-webkit-keyframes bounce {
+  from, to {
+    bottom: 95px;
+  }
+  75% {
+    bottom: 130px;
+  }
+}
+
+@-webkit-keyframes squish {
+  from, to {
+    height: 0px;
+  }
+  88% {
+    height: 35px;
+  }
+}
+
+@keyframes bounce {
+  from, to {
+    bottom: 95px;
+  }
+  75% {
+    bottom: 130px;
+  }
+}
+
+@keyframes squish {
+  from, to {
+    height: 0px;
+  }
+  88% {
+    height: 35px;
+  }
+}
+
+@-moz-keyframes bounce {
+  from, to {
+    bottom: 95px;
+  }
+  75% {
+    bottom: 130px;
+  }
+}
+
+@-moz-keyframes squish {
+  from, to {
+    height: 0px;
+  }
+  88% {
+    height: 35px;
+  }
+}
+
+@-o-keyframes bounce {
+  from, to {
+    bottom: 95px;
+  }
+  75% {
+    bottom: 130px;
+  }
+}
+
+@-o-keyframes squish {
+  from, to {
+    height: 0px;
+  }
+  88% {
+    height: 35px;
+  }
+}
+
+
+/*  **************  */
+
+.char_png {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
