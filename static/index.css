@@ -1,34 +1,39 @@
 
+.gravify-text {
+  background: -webkit-linear-gradient(#8d98ae, #c1d1f2);
+  height: 300px; 
+  padding: 150px;
+}
+
 .row {
   padding-top:50px;
 }
 
 .lamp {
-  height: 63px;
-  width: 50px;
-}
-
-.animated { 
-    -webkit-animation: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
-    animation: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
-    -moz-animation: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
-    -o-animation: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+  height: 74px;
+  width: 59px;
 }
 
 .bounce { 
     position: relative;
     right: 59px;
     bottom: 59px;
+    -webkit-animation: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+    animation: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+    -moz-animation: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+    -o-animation: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
 }
 
 .squish { 
-    -webkit-animation-name: squish; 
-    animation-name: squish; 
+    -webkit-animation: squish .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+    animation: squish .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+    -moz-animation: squish .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+    -o-animation: squish .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
 }
 
 @-webkit-keyframes bounce { 
   from, to {
-    transform: translateY(0);
+    transform: translateY(10px);
   }
   75% {
     transform: translateY(-35px);
@@ -37,7 +42,7 @@
 
 @keyframes bounce { 
   from, to {
-    transform: translateY(0);
+    transform: translateY(10px);
   }
   75% {
     transform: translateY(-35px);
@@ -46,7 +51,7 @@
 
 @-o-keyframes bounce {
   from, to {
-    transform: translateY(0);
+    transform: translateY(10px);
   }
   75% {
     transform: translateY(-35px);
@@ -56,7 +61,7 @@
 
 @-moz-keyframes bounce {
   from, to {
-    transform: translateY(0);
+    transform: translateY(10px);
   }
   75% {
     transform: translateY(-35px);

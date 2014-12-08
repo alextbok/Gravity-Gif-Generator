@@ -11,18 +11,25 @@
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
-		<script src="{{js_url}}"></script>
-		<script src="{{html2canvas_url}}"></script>
 		<link rel="stylesheet" href="{{css_url}}"></style>			
 	</head>
 
 	<body>
 		<div class="container" style="padding-top: 50px">
+			<div class="alert alert-danger alert-dismissible" role="alert" style="display: {{bad_input}}">
+				<strong>Oops!</strong> Inputs must be between 3 and 14 characters and can only contain letters, numbers and a few special characters.
+				<button type="button" class="close" data-dismiss="alert">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span>
+				</button>
+			</div>
 			<div class="row">
-				<div class="gravify-text" style="height: 300px; padding: 150px;">
+				<div class="gravify-text">
 					<img class="text" style="width: {{first_chunk_size}}px" src="{{first_chunk_url}}">
-					<img class="text animated squish" style="width: 59px" src="{{bounce_letter_url}}">
-					<img class="lamp animated bounce" src="{{lamp_url}}">
+					<div style="width: 59px; height: 47px; display: inline-block; position: relative; vertical-align: middle;">
+						<img class="text squish" style="width: 59px; position: absolute; bottom: -5px;" src="{{bounce_letter_url}}">
+					</div>
+					<img class="lamp bounce" src="{{lamp_url}}">
 					<img class="text" style="width: {{last_letter_size}}px; position: relative; right: 59px" src="{{last_letter_url}}">
 				</div>
 			</div>
