@@ -1,9 +1,19 @@
 
 $(window).load(function() {
-	var c = document.getElementById("canvas");
-	var ctx = c.getContext("2d");
-	var img = document.getElementById("grav_png");
-	
-	var word = ctx.drawImage(img,10,10);
-	word.id = "gravtext"
+/*
+	var xmlhttp = new XMLHttpRequest();
+	$("#grav-button").click(function() {
+		xmlhttp.onreadystatechange = function() {
+		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+				console.log(xmlhttp.responseText);
+				//document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+			}
+		}
+		xmlhttp.open("GET","/generate_name/alex",true);
+		xmlhttp.send();
+	});
+*/
+
+
 });

@@ -4,18 +4,6 @@ from __future__ import print_function
 from PIL import Image, ImageChops
 from PIL.GifImagePlugin import getheader, getdata
 
-sequence = []
-
-# generate sequence
-for i in range(100):
-	im = <generate image i>
-	sequence.append(im)
-
-# write GIF animation
-fp = open("out.gif", "wb")
-gifmaker.makedelta(fp, sequence)
-fp.close()
-
 
 def makedelta(fp, sequence):
     """Convert list of image frames to a GIF animation file"""
@@ -26,14 +14,25 @@ def makedelta(fp, sequence):
 
     for im in sequence:
 
+    	print("ONE ITERATION")
         #
         # FIXME: write graphics control block before each frame
 
         if not previous:
 
             # global header
-            for s in getheader(im) + getdata(im):
-                fp.write(s)
+            #print(getheader(im))
+            #print(getdata(im))
+            #for s in getheader(im) + getdata(im):
+            #    fp.write(s)
+            for elt in getheader(im):
+            	if elt:
+            		for s in elt:
+            			fp.write(s)
+            for elt in getdata(im):
+            	if elt:
+            		for s in elt:
+            			fp.write(s)
 
         else:
 
@@ -63,11 +62,40 @@ def makedelta(fp, sequence):
 
 if __name__ == "__main__":
 
-    import sys
+	import sys
 
-    if len(sys.argv) < 3:
-        print("GIFMAKER -- create GIF animations")
-        print("Usage: gifmaker infile outfile")
-        sys.exit(1)
+	if len(sys.argv) < 3:
+		print("Usage: gif_create infile outfile ")
+		sys.exit(1)
 
-    compress(sys.argv[1], sys.argv[2])
+	sequence = []
+	for i in range(2, len(sys.argv)):
+		im = Image.open(sys.argv[i])
+		if im.mode != 'RGBA':
+			print("BAD")
+			im = im.convert('RGBA')
+		else:
+			print("GOOD")
+		sequence.append(im)
+
+
+	# generate sequence
+	#for i in range(100):
+	#	im = <generate image i>
+	#	sequence.append(im)
+
+	outfile = open(sys.argv[1], "wb")
+	makedelta(outfile, sequence)
+	outfile.close()
+
+
+
+
+
+
+
+
+
+
+
+
