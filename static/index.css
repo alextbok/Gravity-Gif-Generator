@@ -25,6 +25,8 @@ body {
     animation: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
     -moz-animation: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
     -o-animation: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+    -webkit-transform: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+    -ms-transform: bounce .8s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
 }
 
 .squish { 
